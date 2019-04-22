@@ -2,7 +2,7 @@ import React from 'react';
 
 const Session = () => (
   <div>
-    <h1>App</h1>
+    <h1>session</h1>
   </div>
 );
 
