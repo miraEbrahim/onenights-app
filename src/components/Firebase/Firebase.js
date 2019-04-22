@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import React from 'react';
 import app from 'firebase/app';
+import 'firebase/auth';
 
 const prodConfig = {
   apiKey: process.env.REACT_APP_PROD_API_KEY,
@@ -25,6 +26,8 @@ const config = process.env.NODE_ENV === 'production' ? prodConfig : devConfig;
 class Firebase {
   constructor() {
     app.initializeApp(config);
+
+    this.auth = app.auth();
   }
 }
 
