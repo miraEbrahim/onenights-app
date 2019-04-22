@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react';
 import app from 'firebase/app';
 
