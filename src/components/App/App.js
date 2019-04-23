@@ -16,7 +16,6 @@ import { withAuthentication } from '../Session/Session';
 const App = () => (
   <Router>
     <div>
-      <Navigation authUser={this.state.authUser} />
       <Navigation />
 
       <hr />
