@@ -29,6 +29,9 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ADMIN}>Admin</Link>
     </li>
     <li>
+      <Link to={ROUTES.MAP}>Map</Link>
+    </li>
+    <li>
       <SignOutButton />
     </li>
   </ul>
@@ -41,6 +44,9 @@ const NavigationNonAuth = () => (
     </li>
     <li>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.MAP}>Map</Link>
     </li>
   </ul>
 );
