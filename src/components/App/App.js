@@ -10,7 +10,7 @@ import HomePage from '../Home/HomePage';
 import AccountPage from '../Account/Account';
 import AdminPage from '../Admin/Admin';
 import PlacesPage from '../Places/Places';
-
+import Map from '../Map/Map';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session/Session';
 
@@ -29,6 +29,8 @@ const App = () => (
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
       <Route path={ROUTES.PLACES_PAGE} component={PlacesPage} />
+
+      <Map />
     </div>
   </Router>
 );
