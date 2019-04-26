@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import ListPlaces from './ListPlaces';
-import './index.css';
 
-class App extends Component {
+class PlacesPage extends Component {
   state = {
     places: [
       {
@@ -114,4 +113,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default PlacesPage;
