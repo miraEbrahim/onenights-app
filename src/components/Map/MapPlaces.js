@@ -7,9 +7,11 @@ import { mapDarkStyle } from './MapStyle';
 import './mapstyle.css';
 
 class MapPlaces extends Component {
+  state = {
+    venues: []
+  };
   componentDidMount() {
     this.getVenues();
-    this.loadMap();
   }
 
   loadMap = () => {
@@ -26,6 +28,7 @@ class MapPlaces extends Component {
       client_id: FS_ID,
       client_secret: FS_SEC,
       near: 'london',
+      query: 'food',
       v: '20190428'
     };
 
@@ -33,7 +36,12 @@ class MapPlaces extends Component {
     axios
       .get(endPoint + new URLSearchParams(parameters))
       .then(response => {
-        console.log(response.data.response.groups[0].items);
+        this.setState(
+          {
+            venues: response.data.response.groups[0].items
+          },
+          this.loadMap()
+        );
       })
       .catch(error => {
         console.log("Error get Foursquare API's Data" + error);
@@ -41,11 +49,39 @@ class MapPlaces extends Component {
   };
 
   initMap = () => {
-    // eslint-disable-next-line
+    //create a map
     const map = new window.google.maps.Map(document.getElementById('map'), {
       center: london,
       zoom: 10,
       style: mapDarkStyle
+    });
+
+    //Create infowindow
+    let infowindow = new window.google.maps.InfoWindow();
+
+    //Display Dynamic Markers
+    this.state.venues.map(myVenue => {
+      //infowindow content
+      let contentString = `This is ${myVenue.venue.name}`;
+
+      //create markers
+      let marker = new window.google.maps.Marker({
+        position: {
+          lat: myVenue.venue.location.lat,
+          lng: myVenue.venue.location.lng
+        },
+        map: map,
+        title: myVenue.venue.name
+      });
+
+      //click on a marker
+      marker.addListener('click', function() {
+        //change content
+        infowindow.setContent(contentString);
+
+        //open infowindow
+        infowindow.open(map, marker);
+      });
     });
   };
 
