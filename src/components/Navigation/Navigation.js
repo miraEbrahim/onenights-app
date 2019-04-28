@@ -17,9 +17,6 @@ const Navigation = () => (
 const NavigationAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
       <Link to={ROUTES.HOME_PAGE}>Home</Link>
     </li>
     <li>
@@ -29,16 +26,17 @@ const NavigationAuth = () => (
       <Link to={ROUTES.ADMIN}>Admin</Link>
     </li>
     <li>
-      <Link to={ROUTES.PLACES_PAGE}>PLACES</Link>
+      <Link to={ROUTES.PLACES_PAGE}>PLACES Page</Link>
     </li>
-    <li>
-      <Link to={ROUTES.PLACES_MAP}>PLACES Map</Link>
-    </li>
+
     <li>
       <Link to={ROUTES.BLOG}>BLOG</Link>
     </li>
     <li>
       <Link to={ROUTES.LANDING_PAGE}>landing page</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.MAP_PLACES}>MAP PLACES </Link>
     </li>
     <li>
       <SignOutButton />
@@ -49,19 +47,17 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
   <ul>
     <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
       <Link to={ROUTES.SIGN_IN}>Sign In</Link>
     </li>
     <li>
-      <Link to={ROUTES.PLACES_PAGE}>PLACES</Link>
+      <Link to={ROUTES.PLACES_PAGE}>PLACES Page</Link>
     </li>
-    <li>
-      <Link to={ROUTES.PLACES_MAP}>PLACES Map</Link>
-    </li>
+
     <li>
       <Link to={ROUTES.BLOG}>BLOG</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.MAP_PLACES}>MAP PLACES </Link>
     </li>
     <li>
       <Link to={ROUTES.LANDING_PAGE}>landing page</Link>

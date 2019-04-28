@@ -9,3 +9,4 @@ export const PASSWORD_FORGET = '/pw-forget';
 export const LANDING_PAGE = '/landingpage';
 export const PLACES_MAP = '/placesmap';
 export const BLOG = '/blog';
+export const MAP_PLACES = '/mapplaces';

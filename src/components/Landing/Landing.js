@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-
-const mapStyles = {
-  width: '100%',
-  height: '100%'
-};
+import { mapDarkStyle } from '../Map/MapStyle';
+import { london, G_API } from '../Map/MapData';
 
 export class MapContainer extends Component {
   state = {
@@ -34,11 +31,8 @@ export class MapContainer extends Component {
       <Map
         google={this.props.google}
         zoom={14}
-        style={mapStyles}
-        initialCenter={{
-          lat: -1.2884,
-          lng: 36.8233
-        }}
+        style={mapDarkStyle}
+        initialCenter={london}
       >
         <Marker onClick={this.onMarkerClick} name={'marker'} />
         <InfoWindow
@@ -56,5 +50,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyAvvgbXQPqd-UKFbNBjvpxUsAXtX-1LXow'
+  apiKey: G_API
 })(MapContainer);
