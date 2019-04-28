@@ -2,14 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navigation from '../Navigation/Navigation';
-//import Landing from '../Landing/Landing';
+
 import SignUpPage from '../SignUp/SignUp';
 import SignInPage from '../SignIn/SignIn';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
 import HomePage from '../Home/HomePage';
 import AccountPage from '../Account/Account';
 import AdminPage from '../Admin/Admin';
-import PlacesPage from '../Places/PlacesPage';
 
 import MapPlaces from '../Map/MapPlaces';
 import LandingPage from '../LandingPage/LandingPage';
@@ -30,8 +29,6 @@ const App = () => (
       <Route path={ROUTES.HOME_PAGE} component={HomePage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
-
-      <Route path={ROUTES.PLACES_PAGE} component={PlacesPage} />
       <Route path={ROUTES.LANDING_PAGE} component={LandingPage} />
       <Route path={ROUTES.BLOG} component={Blog} />
       <Route path={ROUTES.MAP_PLACES} component={MapPlaces} />
