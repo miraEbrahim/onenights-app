@@ -17,8 +17,8 @@ class Map extends Component {
 
         // Load the Google Maps API
         const script = document.createElement('script');
-        const API = 'AIzaSyAvvgbXQPqd-UKFbNBjvpxUsAXtX-1LXow';
-        script.src = `https://maps.googleapis.com/maps/api/js?key=${API}&callback=resolveGoogleMapsPromise`;
+        const G_API = 'AIzaSyAvvgbXQPqd-UKFbNBjvpxUsAXtX-1LXow';
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${G_API}&callback=resolveGoogleMapsPromise`;
         script.async = true;
         document.body.appendChild(script);
       });

@@ -6,3 +6,6 @@ export const PLACES_PAGE = '/placespage';
 export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
+export const LANDING_PAGE = '/landingpage';
+export const PLACES_MAP = '/placesmap';
+export const BLOG = '/blog';

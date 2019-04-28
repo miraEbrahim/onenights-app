@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Navigation from '../Navigation/Navigation';
-import LandingPage from '../Landing/Landing';
+import Landing from '../Landing/Landing';
 import SignUpPage from '../SignUp/SignUp';
 import SignInPage from '../SignIn/SignIn';
 import PasswordForgetPage from '../PasswordForget/PasswordForget';
@@ -10,7 +10,9 @@ import HomePage from '../Home/HomePage';
 import AccountPage from '../Account/Account';
 import AdminPage from '../Admin/Admin';
 import PlacesPage from '../Places/Places';
-import Map from '../Map/Map';
+import PlacesMap from '../PlacesMap/PlacesMap';
+import LandingPage from '../LandingPage/LandingPage';
+import Blog from '../Blog/Blog';
 import * as ROUTES from '../../constants/routes';
 import { withAuthentication } from '../Session/Session';
 
@@ -21,16 +23,17 @@ const App = () => (
 
       <hr />
 
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route exact path={ROUTES.LANDING} component={Landing} />
       <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
       <Route path={ROUTES.SIGN_IN} component={SignInPage} />
       <Route path={ROUTES.PASSWORD_FORGET} component={PasswordForgetPage} />
       <Route path={ROUTES.HOME_PAGE} component={HomePage} />
       <Route path={ROUTES.ACCOUNT} component={AccountPage} />
       <Route path={ROUTES.ADMIN} component={AdminPage} />
+      <Route path={ROUTES.PLACES_MAP} component={PlacesMap} />
       <Route path={ROUTES.PLACES_PAGE} component={PlacesPage} />
-
-      <Map />
+      <Route path={ROUTES.LANDING_PAGE} component={LandingPage} />
+      <Route path={ROUTES.BLOG} component={Blog} />
     </div>
   </Router>
 );

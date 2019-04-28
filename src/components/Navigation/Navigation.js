@@ -32,6 +32,15 @@ const NavigationAuth = () => (
       <Link to={ROUTES.PLACES_PAGE}>PLACES</Link>
     </li>
     <li>
+      <Link to={ROUTES.PLACES_MAP}>PLACES Map</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.BLOG}>BLOG</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.LANDING_PAGE}>landing page</Link>
+    </li>
+    <li>
       <SignOutButton />
     </li>
   </ul>
@@ -47,6 +56,15 @@ const NavigationNonAuth = () => (
     </li>
     <li>
       <Link to={ROUTES.PLACES_PAGE}>PLACES</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.PLACES_MAP}>PLACES Map</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.BLOG}>BLOG</Link>
+    </li>
+    <li>
+      <Link to={ROUTES.LANDING_PAGE}>landing page</Link>
     </li>
   </ul>
 );
