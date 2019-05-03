@@ -32,7 +32,7 @@ class ListView extends Component {
     } else {
       showingVenues = venues;
     }
-
+    console.log(showingVenues);
     showingVenues.sort(sortBy('name'));
     return (
       <div className="list-venues">
@@ -45,6 +45,7 @@ class ListView extends Component {
             value={this.state.query}
             onChange={event => this.updateQuery(event.target.value)}
           />
+
           <Link to="/create" className="add-venue">
             Add Venue
           </Link>

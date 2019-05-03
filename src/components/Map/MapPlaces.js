@@ -40,6 +40,7 @@ class MapPlaces extends Component {
           {
             venues: response.data.response.groups[0].items
           },
+
           this.loadMap()
         );
       })
