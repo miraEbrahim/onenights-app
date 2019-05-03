@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import ListView from '../Places/ListView';
 import axios from 'axios';
 
 import { london, G_API, FS_ID, FS_SEC } from './MapData';
@@ -88,6 +88,12 @@ class MapPlaces extends Component {
   render() {
     return (
       <main>
+        <div className="map-app">
+          <ListView
+            venues={this.state.venues}
+            onDeleteVenues={this.removeVenue}
+          />
+        </div>
         <div id="map" />
       </main>
     );
