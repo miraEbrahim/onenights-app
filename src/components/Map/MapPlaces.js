@@ -61,6 +61,7 @@ class MapPlaces extends Component {
     let infowindow = new window.google.maps.InfoWindow();
 
     //Display Dynamic Markers
+    // eslint-disable-next-line
     this.state.venues.map(myVenue => {
       //infowindow content
       let contentString = `This is ${myVenue.venue.name}`;
